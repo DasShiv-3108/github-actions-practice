@@ -1,0 +1,20 @@
+
+name: Mera Phela Workflow
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  phela-job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Namaste karo
+        run: echo "Namaste Duniyaa! GitHub Actions chal gaya!"
+
+      - name: System info dekho
+        run: echo "Date: $(date)"
+             echo "OS: $(uname -a)"
+
