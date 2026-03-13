@@ -20,7 +20,7 @@ on:
          - staging
          - production
   schedule:
-    - cron: '*/2* * * *'
+    - cron: '*/2 * * * *'
 
 jobs:
   phela-job:
