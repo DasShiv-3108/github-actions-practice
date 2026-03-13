@@ -6,6 +6,20 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      tumhara_naam:
+        description: "Apna naam likho"
+        required: true
+        default: "Bhai"
+    environment:
+      description: "Kaunsa Environment"
+      required: true
+      type: choice
+      options:
+        - development
+        - staging
+        - production
+
 
 jobs:
   phela-job:
@@ -13,7 +27,10 @@ jobs:
 
     steps:
       - name: Namaste karo
-        run: echo "Namaste Duniyaa! GitHub Actions chal gaya!"
+        run: echo "Namaste ${{ github.event.inputs.tumhara_naam }} "
+
+      - name: Environment Dekho
+      - run: echo "Chal rahe hain ${{ github.event.inputs.environment }} "
 
       - name: System info dekho
         run: |
