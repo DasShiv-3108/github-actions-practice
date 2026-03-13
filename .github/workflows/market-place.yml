@@ -1,0 +1,34 @@
+
+name: MarketPlace Practice
+
+on:
+  workflow_dispatch:
+
+jobs:
+  marketplace-job:
+    run-on: ubuntu-latest
+
+  steps:
+    - name: Code chekout karo
+      uses: actions/checkout@v4
+
+
+    - name: Node.js setup karo
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20'
+
+    - name: Version Dekho
+      run: |
+        echo "Node versio:"
+        node --version
+        echo "NPM version:"
+        npm --version
+
+    - name: Version Dekho
+      uses: acitons/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Python Version Dekho
+       run: python --version
