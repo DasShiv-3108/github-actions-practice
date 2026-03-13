@@ -11,14 +11,14 @@ on:
         description: "Apna naam likho"
         required: true
         default: "Bhai"
-    environment:
-      description: "Kaunsa Environment"
-      required: true
-      type: choice
-      options:
-        - development
-        - staging
-        - production
+      environment:
+        description: "Kaunsa Environment"
+        required: true
+        type: choice
+        options:
+         - development
+         - staging
+         - production
 
 
 jobs:
@@ -30,7 +30,7 @@ jobs:
         run: echo "Namaste ${{ github.event.inputs.tumhara_naam }} "
 
       - name: Environment Dekho
-      - run: echo "Chal rahe hain ${{ github.event.inputs.environment }} "
+        run: echo "Chal rahe hain ${{ github.event.inputs.environment }} "
 
       - name: System info dekho
         run: |
